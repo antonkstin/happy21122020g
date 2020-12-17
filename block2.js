@@ -5,3 +5,5 @@ const messages = [
   'Вот и второй этап',
   ''
 ];
+
+const counter = 10;
