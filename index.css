@@ -55,7 +55,7 @@ body {
 
 .buttons {
   position: absolute;
-  bottom: 180px;
+  bottom: 20vh;
   left: 0;
   width: 100%;
   display: flex;
@@ -81,7 +81,7 @@ body {
   position: absolute;
   width: 80%;
   left: 10%;
-  bottom: 240px;
+  bottom: 20vh;
   display: flex;
   justify-content: space-between;
   opacity: 0;
