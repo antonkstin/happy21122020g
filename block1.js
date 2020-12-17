@@ -148,7 +148,7 @@ blockInputs.addEventListener('input', (event) => {
 
     if ( inputs[0].value == 1 && inputs[1].value == 2 && inputs[2].value == 5) {
 
-      block1.style = 'opacity: 0; pointer-events: none';
+      block1.style = 'display: none';
       block2.style.display = 'opacity: 1; pointer-events: all';
 
     } else {
