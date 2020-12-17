@@ -1,5 +1,5 @@
 // block1 -------------------------
-
+(function() {
 const messages = {
   start: [
     'Если ты читаешь это сообщение,',
@@ -147,20 +147,20 @@ blockInputs.addEventListener('input', (event) => {
     if ( inputs[0].value == 1 && inputs[1].value == 2 && inputs[2].value == 5) {
 
       block1.style = 'display: none';
-      block2.style.display = 'opacity: 1; pointer-events: all';
+      block2.style = 'opacity: 1; pointer-events: all; position: static';
 
     } else {
 
-      blockPrompt.innerHTML = 'Мяуошибка. Подумай еще';
+      blockPrompt.innerHTML = 'Мяуошибка. Помнишь: *внимательность*';
       blockPrompt.style = 'opacity: 1; color: red; font-weight: 400';
 
       setTimeout(() => {
 
-        blockPrompt.innerHTML = 'Мяуошибка. Подумай еще<br>(по возрастанию)';
+        blockPrompt.innerHTML = 'Что я уже зашифровал для тебя??';
 
         setTimeout(() => {
 
-          blockPrompt.innerHTML = 'Мяуошибка. Подумай еще<br>(по возрастанию)<br>(пальчики оближешь)';
+          blockPrompt.innerHTML = '(пальчики оближешь)';
 
         }, 40000);
 
@@ -177,4 +177,5 @@ inputs.forEach((item) => {
   });
 });
 
+})();
 // block1 -------------------------

@@ -41,6 +41,10 @@ body {
   justify-content: center;
 }
 
+/* .block1 {
+  display: none;
+} */
+
 .block__title {
   text-align: center;
 }
@@ -103,6 +107,25 @@ body {
 
 
 .block2 {
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
+}
+
+
+.block__image {
+  position: absolute;
+  width: 90%;
+  left: 5%;
+  bottom: calc(20vh + 60px + 60px);
+  opacity: 0;
+}
+
+
+
+
+
+.block3 {
   background-color: yellow;
   pointer-events: none;
   opacity: 0;
