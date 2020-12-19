@@ -1,8 +1,12 @@
+(function() {
 const messages = [
   'А теперь к делу',
-  'Сейчас, я покажу тебе, карту, которую нашел в кладовке',
-  'Надеюсь, что ты знаешь, где это место...',
-  'Скорее приди туда и найди сокровище'
+  'Мои друзья сказали, что фотка, которую я тебе сейчас покажу',
+  'Поможет нам их найти',
+  'Но я совсем не понимаю, что там изображено',
+  'Надеюсь, что ты узнаешь это место',
+  'Это должно быть недалеко',
+  'Гляди:'
 ];
 
 const block2 = document.querySelector('.block2');
@@ -63,21 +67,27 @@ blockInputs.addEventListener('input', (event) => {
 
   } else {
 
-    if ( inputs[0].value == 9 && inputs[1].value == 1 && inputs[2].value == 1) {
+    if ( inputs[0].value == 3 && inputs[1].value == 1 && inputs[2].value == 4) {
 
       block2.style = 'display: none';
       block3.style = 'opacity: 1; pointer-events: all; position: static';
 
     } else {
 
-      blockPrompt.innerHTML = 'А ты уверена, что это то место?';
+      blockPrompt.innerHTML = 'Мяуошибка( Кажется здесь изображен мост';
       blockPrompt.style = 'opacity: 1; color: red; font-weight: 400';
 
       setTimeout(() => {
 
-        blockPrompt.innerHTML = 'Смотри внимательнее.. Чую, что ты близка';
+        blockPrompt.innerHTML = 'Еще я заметил трубы водосливные и какие-то рамки на дороге наверху. Они должны помочь найти место';
 
-      }, 5000);
+        setTimeout(() => {
+
+          blockPrompt.innerHTML = 'Осмотри соседние со стрелкой колонны. Мб что-то в зазорчиках лежит';
+
+        }, 60000);
+
+      }, 40000);
 
     }
 
@@ -89,3 +99,5 @@ inputs.forEach((item) => {
     item.value = '';
   });
 });
+
+})();
