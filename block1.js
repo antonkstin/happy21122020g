@@ -35,7 +35,9 @@ const inputs = blockInputs.querySelectorAll('.block__input');
 const block2 = document.querySelector('.block2');
 
 
-
+const mur = new Audio();
+mur.preload = 'auto';
+mur.src = './audios/catMur.mp3';
 
 
 
@@ -47,9 +49,9 @@ const handlerClickScreen = (event) => {
     if ( counter === 0 ) {
 
       blockPrompt.style.opacity = '0';
+      mur.play();
   
-    } 
-  
+    }   
     
     else if ( counter === messages.start.length - 1 ) {
   

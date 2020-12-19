@@ -9,13 +9,13 @@
       'Ну ладно. Че уж поделать))',
       'Но перед тем как мы пойдем дальше',
       'Скажу, что вот я видел как ты выглядишь',
-      'Такая касииивая и миилая и неежная',
-      'А я не представился. Ты только меня как-то вообразила',
-      'Так вот представляю вашему внимаю котика Мурзика:',
+      'Такая касииивая, миилая и неежная дееевушка',
+      'А я не представился. Ты только меня как-то вообразила наверное',
+      'Так вот, представляю вашему внимаю: "котик Мурзик":',
     ],
 
     middle: [
-      '',
+      '<br>',
       'Правда красивчик?))',
       'Ну ладно, ладно, это не я. Это же кот из Шрека',
       'Я использую эту фотку для аватарки вКОТакте',
@@ -24,7 +24,7 @@
     ],
 
     end: [
-      '',
+      '<br>',
       'Ну вот, теперь ты меня увидела и мы окончательно познакомились',
       'А теперь, в путь!',
     ],
@@ -66,7 +66,6 @@
       if ( counter - messages.start.length < messages.middle.length ) {
 
         if ( counter - messages.start.length == 0 ) {
-          titleBLock.innerHTML = '';
           fakeAva.style.opacity = 1;
         } else {
           fakeAva.style.opacity = 0;
@@ -87,7 +86,6 @@
         if ( counter - messages.start.length - messages.middle.length < messages.end.length ) {
 
           if ( counter - messages.start.length - messages.middle.length == 0 ) {
-            titleBLock.innerHTML = '';
             ava.style.opacity = 1;
           } else {
             ava.style.opacity = 0;
