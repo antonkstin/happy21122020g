@@ -16,9 +16,18 @@
   let counter = 0; 
 
 
+  const fort = new Audio();
+  fort.preload = 'auto';
+  fort.src = './audios/fort.mp3';
+
+
   const handlerClickScreen = (event) => {
 
     if ( counter < messages.length ) { 
+
+      if (counter==4) {
+        fort.play();
+      }
   
       titleBLock.style.opacity = 0;
   

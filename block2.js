@@ -21,6 +21,17 @@ const block3 = document.querySelector('.block3');
 let counter = 0; 
 
 
+const mur = new Audio();
+mur.preload = 'auto';
+mur.src = './audios/catmur.mp3';
+const myau = new Audio();
+myau.preload = 'auto';
+myau.src = './audios/catmyau.mp3';
+const panter = new Audio();
+panter.preload = 'auto';
+panter.src = './audios/panter.mp3';
+
+
 
 
 const handlerClickScreen = (event) => {
@@ -40,6 +51,8 @@ const handlerClickScreen = (event) => {
   } else {
 
     block2.removeEventListener('click', handlerClickScreen);
+
+    panter.play();
 
     setTimeout(() => {
 
@@ -69,10 +82,15 @@ blockInputs.addEventListener('input', (event) => {
 
     if ( inputs[0].value == 3 && inputs[1].value == 1 && inputs[2].value == 4) {
 
+      mur.play();
+      panter.pause();
+
       block2.style = 'display: none';
       block3.style = 'opacity: 1; pointer-events: all; position: static';
 
     } else {
+
+      myau.play();
 
       blockPrompt.innerHTML = 'Мяуошибка( Кажется здесь изображен мост';
       blockPrompt.style = 'opacity: 1; color: red; font-weight: 400';

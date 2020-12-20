@@ -9,8 +9,8 @@
       'Ну ладно. Че уж поделать))',
       'Но перед тем как мы пойдем дальше',
       'Скажу, что вот я видел как ты выглядишь',
-      'Такая касииивая, миилая и неежная дееевушка',
-      'А я не представился. Ты только меня как-то вообразила наверное',
+      'Такая красивая, милая, нежная... как цветочек',
+      'А я не представился еще( Ты, возможно меня вобразила только',
       'Так вот, представляю вашему внимаю: "котик Мурзик":',
     ],
 
@@ -25,7 +25,7 @@
 
     end: [
       '<br>',
-      'Ну вот, теперь ты меня увидела и мы окончательно познакомились',
+      'Ну вот, теперь ты меня увидела и мы окончательно познакомились))',
       'А теперь, в путь!',
     ],
   };
@@ -44,6 +44,23 @@
   const block4 = document.querySelector('.block4');
 
   let counter = 0; 
+
+
+  const mur = new Audio();
+  mur.preload = 'auto';
+  mur.src = './audios/catmur.mp3';
+  const myau = new Audio();
+  myau.preload = 'auto';
+  myau.src = './audios/catmyau.mp3';
+  const panter = new Audio();
+  panter.preload = 'auto';
+  panter.src = './audios/panter.mp3';
+  const kotik = new Audio();
+  kotik.preload = 'auto';
+  kotik.src = './audios/kotik.mp3';
+  const shrek = new Audio();
+  shrek.preload = 'auto';
+  shrek.src = './audios/shrek.mp3';
 
 
 
@@ -67,6 +84,7 @@
 
         if ( counter - messages.start.length == 0 ) {
           fakeAva.style.opacity = 1;
+          shrek.play();
         } else {
           fakeAva.style.opacity = 0;
         }
@@ -86,6 +104,8 @@
         if ( counter - messages.start.length - messages.middle.length < messages.end.length ) {
 
           if ( counter - messages.start.length - messages.middle.length == 0 ) {
+            shrek.pause();
+            kotik.play();
             ava.style.opacity = 1;
           } else {
             ava.style.opacity = 0;
@@ -102,6 +122,9 @@
           }, 500);
   
         } else {
+
+          kotik.pause();
+          panter.play();
 
           block3.removeEventListener('click', handlerClickScreen);
   
@@ -132,11 +155,16 @@
     } else {
   
       if ( inputs[0].value == 8 && inputs[1].value == 3 && inputs[2].value == 5) {
+
+        mur.play();
+        panter.pause();
   
         block3.style = 'display: none';
         block4.style = 'opacity: 1; pointer-events: all; position: static';
   
       } else {
+
+        myau.play();
   
         blockPrompt.innerHTML = 'МЯУ МЯУ МЯУ *что-то не сходится*';
         blockPrompt.style = 'opacity: 1; color: red; font-weight: 400';
