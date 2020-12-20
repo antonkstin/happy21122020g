@@ -37,7 +37,7 @@ const block2 = document.querySelector('.block2');
 
 const mur = new Audio();
 mur.preload = 'auto';
-mur.src = './audios/catMur.mp3';
+mur.src = './audios/catmur.mp3';
 
 
 
